@@ -59,7 +59,7 @@ class Owner
     end
   end
   
-  def lists_pets()
+  def list_pets()
     
   end
   
