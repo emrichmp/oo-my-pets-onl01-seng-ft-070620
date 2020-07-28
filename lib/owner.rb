@@ -8,7 +8,7 @@ class Owner
     @name = name
     @species = species
     @@all << self
-    @pets = {:cats => [], :dogs => []}
+    @@pets = {:cats => [], :dogs => []}
   end
   
   def species()
@@ -32,36 +32,36 @@ class Owner
   end
   
   def buy_cat(cat_name)
-    @pets[:cats] << Cat.new(cat_name, self)
+    @@pets[:cats] << Cat.new(cat_name, self)
   end
 
   def buy_dog(dog_name)
-    @pets[:dogs] << Dog.new(dog_name, self)
+    @@pets[:dogs] << Dog.new(dog_name, self)
   end
   
   def cats()
-    @pets[:cats]
+    @@pets[:cats]
   end
   
   def dogs()
-    @pets[:dogs]
+    @@pets[:dogs]
   end
   
   def walk_dogs()
-    @pets[:dogs].each do |dog|
+    @@pets[:dogs].each do |dog|
       dog.mood = "happy"
     end
   end
   
   def feed_cats()
-    @pets[:cats].each do |cat|
+    @@pets[:cats].each do |cat|
       cat.mood = "happy"
     end
   end
   
   def list_pets()
-    dog_num = @pets[:dogs].length
-    cat_num = @pets[:cats].length
+    dog_num = @@pets[:dogs].length
+    cat_num = @@pets[:cats].length
     puts "I have #{dog_num}(s), and #{cat_num}(s)."
   end
   
