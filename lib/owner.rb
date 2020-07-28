@@ -60,6 +60,8 @@ class Owner
   end
   
   def list_pets()
+    dog_num = @pets[:cats].length
+    cat_num = @pets[:cats].length
     puts "I have "
   end
   
